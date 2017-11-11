@@ -50,11 +50,12 @@ finjeu = true;
 }
 
 //fin de jeu si toute les case son differente de vide
-function finJeu(){
+/*function finJeu(tab){
 	for(var ligne=0; ligne<3;ligne++){
 		for (var col=0; col<3; col++){
 			if (tab[ligne][col].aqui==VIDE) {
 				finjeu = true;
+				console.log;
 			}else{
 				finjeu = false;
 			}
@@ -62,12 +63,12 @@ function finJeu(){
 		}
 
 	}
-}
+}*/
 
 //permet au joueur de jouer
 function choisirCase(e){ // e est un objet javascript de type Event	
 	mc=	document.getElementById("canva");
-	if (bool==false){ 	//permet de trouver l'alignement
+	if ((bool==false)&& (compteur<9)){ 
 
 		//recupère les coordonnée du click
 		var x = e.clientX;
@@ -77,6 +78,9 @@ function choisirCase(e){ // e est un objet javascript de type Event
 		y-=mc.offsetTop;
 		x-=mc.offsetLeft;
 		console.log(x, y);
+		console.log("compteur:"+compteur);
+		console.log(bool);
+
 		// récupère l'unité
 		x = Math.floor(parseInt(x/200));
 		y= Math.floor(parseInt(y/200));
@@ -87,15 +91,14 @@ function choisirCase(e){ // e est un objet javascript de type Event
 			console.log(tab[x][y].aqui);	
 			tab[x][y].afficheToi();	//affiche l'img
 			compteur++;			//incrémente le compteur pr le robot
-			trouveAlignement(tab);			//cherche si un alignement existe
+			trouveAlignement(tab);	//cherche si un alignement existe
 			if(compteur < 9 && bool == false){ 	// tant que le compteur est inférieur a 9 pour pas faire tourner le robot à l'infini et qu'il y a pas d'alignement
 				var tps=setTimeout('robot()',500);			//exec fonction robot après une demi seconde
 			}
-			console.log(compteur+"COMPT");
 		}
 
 	}
-	else if (finJeu()){
+	else if((bool==false)&& (compteur=9)){
 		alert("fin de jeu");	//Si boot est à true le jeux est fini
 	}	
 }
