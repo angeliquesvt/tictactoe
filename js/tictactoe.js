@@ -51,11 +51,9 @@ finjeu = true;
 
 //fin de jeu si toute les case son differente de vide
 function finJeu(){
-	var t=new Array;
-	console.log(t);
 	for(var ligne=0; ligne<3;ligne++){
 		for (var col=0; col<3; col++){
-			if (t[ligne][col].aqui==VIDE) {
+			if (tab[ligne][col].aqui==VIDE) {
 				finjeu = true;
 			}else{
 				finjeu = false;
