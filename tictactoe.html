@@ -22,25 +22,21 @@
 				Votre navigateur ne peut pas afficher de canvas
 			</canvas>
 			<button onclick="init()" class="button"> Rejouer </button>
-<!-- 			<script >
-			 function rejouer(){
-				mc=	document.getElementById("canva");
-				gc = mc.getContext('2d');
-    			gc.clearRect(0,0,600,600);
-    			init();
-   			 }
-			</script> -->
 		</div>
 		<div id="regle" class="element">
 
-			<p>			<h4>Règle du jeu</h4>
+			<p>	
+			<h4>Règle du jeu</h4>
 			Le monde a-t-il davantage besoin d'un super-héros aux pouvoirs sans limite ou d'un justicier à la force redoutable mais d'origine humaine ?
-		</br>Craignant que Superman n'abuse de sa toute-puissance, vous devez l'affronter :
+			<br/>Craignant que Superman n'abuse de sa toute-puissance, vous devez l'affronter :
 			<br/>Pour cela jouez tour à tour, vous devrez créer un alignement de 3 symboles : Cet alignement peut être vertical, horizontal ou diagonal.
 			<br/>Avec cet alignement, mettez fin à la toute puissance de Superman...
 			</p>
+			<h3  id="perdu" style="color:red"> T'es nul batman</h3>
+			<h3  id="gagne" style="color:red">Bien joué batman </h3>
 		</div>
 	</div>
+
 
 
 
