@@ -1,48 +1,45 @@
 <!doctype html>
 <html lang="fr">
 <head>
-	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->                                 
-  <meta charset="utf-8">
-  <title>Tictactoe</title>
-  <link rel="stylesheet" href="css/tictactoe.css">
-  <script src="js/tictactoe.js"></script>
-  <script src="js/case.js"></script>
-  
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->                                 
+<meta charset="utf-8">
+<title>Tictactoe</title>
+<link rel="stylesheet" href="css/tictactoe.css">
+<script src="js/tictactoe.js"></script>
+<script src="js/case.js"></script>
+
 </head>
 <body onload="init()">
 	<nav>
 		<div class="nav">
-		<h1> Morpion batman vs superman </h1>
-	</div>
-</nav>
-
-<main>
-	<div class="conteneur">
-		<div id="jeu" class="element">
-			<canvas  id="canva" width="600px" height="600px">
-				Votre navigateur ne peut pas afficher de canvas
-			</canvas>
-			<button onclick="init()" class="button"> Rejouer </button>
+			<h2> Morpion batman vs superman </h2>
 		</div>
-		<div id="regle" class="element">
+	</nav>
 
-			<p>	
-			<h4>Règle du jeu</h4>
-			Le monde a-t-il davantage besoin d'un super-héros aux pouvoirs sans limite ou d'un justicier à la force redoutable mais d'origine humaine ?
-			<br/>Craignant que Superman n'abuse de sa toute-puissance, vous devez l'affronter :
-			<br/>Pour cela jouez tour à tour, vous devrez créer un alignement de 3 symboles : Cet alignement peut être vertical, horizontal ou diagonal.
-			<br/>Avec cet alignement, mettez fin à la toute puissance de Superman...
-			</p>
-			<h3  id="perdu" style="color:red"> T'es nul batman</h3>
-			<h3  id="gagne" style="color:red">Bien joué batman </h3>
+	<main>
+		<div class="conteneur">
+			<div id="jeu" class="element">
+				<canvas  id="canva" width="600px" height="600px">
+					Votre navigateur ne peut pas afficher de canvas
+				</canvas>
+			</div>
+			<div id="regle" class="element">
+
+				<p>	
+					<h4>Règle du jeu</h4>
+					Le monde a-t-il davantage besoin d'un super-héros aux pouvoirs sans limite ou d'un justicier à la force redoutable mais d'origine humaine ?
+					<br/>Craignant que Superman n'abuse de sa toute-puissance, vous devez l'affronter :
+					<br/>Pour cela jouez tour à tour, vous devrez créer un alignement de 3 symboles : Cet alignement peut être vertical, horizontal ou diagonal.
+					<br/>Avec cet alignement, mettez fin à la toute puissance de Superman...
+				</p>
+				<h3  id="perdu" style="color:red"> T'es nul batman, Superman est plus puissant que toi...</h3>
+				<h3  id="gagne" style="color:red">Bien joué batman, tu as vaincu Superman ! </h3>
+				<h3  id="match" style="color:red">Match nul,  Tu as la même puissance que Superman...</h3>
+				<button onclick="init()" class="button"> Rejouer </button>
+			</div>
 		</div>
-	</div>
-</main>
-
-
-
-
+	</main>
 </body>
 </html>
