@@ -58,8 +58,10 @@ function choisirCase(e){ // e est un objet javascript de type Event
 	var y = e.clientY;
 
 	//coordonne par rapport au canvas
-	y-=mc.offsetTop;
-	x-=mc.offsetLeft;
+/*	y-=mc.offsetTop;
+	x-=mc.offsetLeft;*/
+	y += mc.scrollLeft - mc.offsetLeft;
+    x += mc.scrollTop - mc.offsetTop;
 	console.log(x, y);
 	console.log("compteur:"+compteur);
 		console.log(bool);

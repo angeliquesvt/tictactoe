@@ -8,7 +8,7 @@ header, footer, main, section, nav, aside, p{
 }
 canvas{
 	border: solid black 1px;
-	margin: 40px;
+	margin: 20px 40px 40px 40px;
 	position: relative;
 	top:0px;
 	left: 0px;
@@ -27,12 +27,12 @@ body{
 .nav{
 	border: solid black 1px;
 	width: 100%;
-	height: 50px;
+	height: 70px;
 	background-color: black;
 }
-h1{
+h2{
 	color: #fcfcfc;
-	margin: 20px;
+	margin: 5px;
 
 }
 h4{
@@ -41,16 +41,16 @@ h4{
 }
 .conteneur{
 	width:100%;
-	height:700px;
+	height:100%;
 }
 #jeu{
 	width: 700px;
-	height: 710px;
+	height: 100%;
 }
 #regle{
 	z-index: 1;
 	width: 500px;
-	height: 350px;
+	height: 450px;
 	background-color: rgba(255, 255, 255, 0.8);
 	margin: 40px;
 	padding: 10px;
