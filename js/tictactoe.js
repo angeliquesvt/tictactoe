@@ -59,16 +59,16 @@ function choisirCase(e){ // e est un objet javascript de type Event
 
 	//coordonne par rapport au canvas
 /*	y-=mc.offsetTop;
-	x-=mc.offsetLeft;*/
-	y += mc.scrollLeft - mc.offsetLeft;
-    x += mc.scrollTop - mc.offsetTop;
+*/	x-=mc.offsetLeft;
+/*	x += mc.scrollLeft - mc.offsetLeft;
+*/    y += mc.scrollTop - mc.offsetTop;
 	console.log(x, y);
 	console.log("compteur:"+compteur);
 		console.log(bool);
 
 	// récupère l'unité
-	x = Math.floor(parseInt(x/200));
-	y= Math.floor(parseInt(y/200));
+	x = Math.floor(x/200);
+	y= Math.floor(y/200);
 	if ((bool==false)&& (compteur<8)){ 
 
 	//si le comteur pair et que la case est vide, je joueur peux jouer

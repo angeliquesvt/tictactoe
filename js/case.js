@@ -27,7 +27,7 @@ function Case(x,y){
 		img.posY=this.posY;
 		
 		img.onload=function(){
-			gc.drawImage(this,this.posX*200,this.posY*200,190,190);
+			gc.drawImage(this,this.posX*200,this.posY*200,195,195);
 		};
 	}
 	
